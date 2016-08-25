@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fxmltableview.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.DisplayLibraryMemberController">
+  <children>
+    <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="600.0" prefWidth="897.0">
+      <children>
+        <Label layoutX="5.0" layoutY="53.0" text="First name" />
+        <TextField fx:id="firstName" layoutX="84.0" layoutY="49.0" />
+        <TextField fx:id="lastName" layoutX="358.0" layoutY="49.0" />
+        <Label layoutX="281.0" layoutY="53.0" text="Last name" />
+        <Label layoutX="554.0" layoutY="53.0" text="Phone no" />
+        <TextField layoutX="631.0" layoutY="49.0" fx:id="phoneNo" />
+        <TextField layoutX="631.0" layoutY="83.0" fx:id="zipCodeName" />
+        <Label layoutX="559.0" layoutY="87.0" text="Zip code" />
+        <Label layoutX="321.0" layoutY="87.0" text="City" />
+        <TextField layoutX="358.0" layoutY="83.0" fx:id="cityName" />
+        <TextField layoutX="84.0" layoutY="83.0" fx:id="stateName" />
+        <Label layoutX="39.0" layoutY="87.0" text="State" />
+        <Button layoutX="84.0" layoutY="121.0" mnemonicParsing="false" onAction="#SearchMembers" prefHeight="25.0" prefWidth="72.0" text="Search" />
+        <Button layoutX="161.0" layoutY="121.0" mnemonicParsing="false" onAction="#clearResults" prefHeight="25.0" prefWidth="72.0" text="Clear" />
+        <Label layoutX="8.0" layoutY="5.0" text="Search Library Member::">
+          <font>
+            <Font name="System Bold" size="18.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <TableView fx:id="libraryMemberTable" layoutX="13.0" layoutY="176.0" prefHeight="409.9999000000025" prefWidth="897.0000915527344">
+      <columns>
+      <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="70.0" text="Member Id">
+          <cellValueFactory>
+            <PropertyValueFactory property="memberId" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="First name">
+          <cellValueFactory>
+            <PropertyValueFactory property="firstName" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Last name">
+          <cellValueFactory>
+            <PropertyValueFactory property="lastName" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Phone no">
+          <cellValueFactory>
+            <PropertyValueFactory property="phoneNo" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn fx:id="state" maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="State" />
+        <TableColumn fx:id="city" maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" text="City" />
+        <TableColumn fx:id="street" maxWidth="5000.0" minWidth="0.0" prefWidth="152.0" text="Street" />
+        <TableColumn fx:id="zipCode" maxWidth="5000.0" minWidth="10.0" prefWidth="78" text="Zip code" />
+        <TableColumn fx:id="action" maxWidth="5000.0" minWidth="10.0" prefWidth="54" text="Action" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

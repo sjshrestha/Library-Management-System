@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="531.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.controller.CheckoutItemController">
+  <children>
+    <Label layoutX="17.0" layoutY="31.0" prefHeight="33.0" prefWidth="117.0" text="Member Id" />
+    <Label layoutX="16.0" layoutY="74.0" prefHeight="15.0" prefWidth="85.0" text="Book ISBN" />
+    <TextField fx:id="textFieldMemberId" layoutX="122.0" layoutY="35.0" />
+    <TextField fx:id="textFieldBookIsbn" layoutX="122.0" layoutY="69.0" />
+    <Button layoutX="326.0" layoutY="36.0" mnemonicParsing="false" onAction="#checkAvailabiltyForCheckout" prefWidth="142.0" text="Check Availability" />
+    <Button layoutX="326.0" layoutY="69.0" mnemonicParsing="false" onAction="#resetInputFields" prefWidth="142.0" text="Reset" />
+    <Label fx:id="labelBookTitle" layoutX="17.0" layoutY="115.0" text="Book Title" visible="false">
+      <font>
+        <Font name="System Bold" size="13.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="labelBookName" font="$x1" layoutX="108.0" layoutY="108.0" prefHeight="25.0" prefWidth="461.0" text="Introduction to Java" visible="false" />
+    <Label fx:id="labelAuthor" layoutX="20.0" layoutY="148.0" text="Author(s)" visible="false" />
+    <ListView fx:id="listAuthor" layoutX="20.0" layoutY="167.0" prefHeight="315.0" prefWidth="220.0" visible="false" />
+    <Label fx:id="labelCopies" layoutX="264.0" layoutY="147.0" text="Copies Available" visible="false" />
+    <ListView fx:id="listBookCopy" layoutX="264.0" layoutY="167.0" prefHeight="315.0" prefWidth="422.0" visible="false" />
+    <Button fx:id="buttonCheckout" layoutX="20.0" layoutY="495.0" mnemonicParsing="false" onAction="#checkOutBook" prefHeight="33.0" prefWidth="98.0" text="Checkout" visible="false" />
+  </children>
+</AnchorPane>
